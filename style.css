@@ -5,7 +5,7 @@
     --light: #EEE;
     --dark: #313154;
     --danger: #ff5b57;
-
+    --todobg: rgb(224, 224, 224);
     --shadow: 0 1px 3px rgba(0,0,0,0.1);
     --glow: 0px 0px 4px rgba(234, 64, 164, 0.75);
 
@@ -55,18 +55,19 @@ margin-bottom: 40px;
 
 .buttons{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     margin-top: 12px;
 
 }
 
-button{
+.buttons > button{
     font-size: 24px;
     background-color: rgba(0, 40, 202, 0.829);
     color: white;
     border-radius: 6px;
     border-style: none;
-    padding: 18px;
+    padding: 4px;
+    width: 10rem;
     margin-left: 18px;
     margin-right: 18px;
 }
@@ -91,6 +92,11 @@ h2{
     border: 2px solid grey;
     border-radius: 1rem;
 }
+
+.notesarea{
+    display: flex;
+}
+
 
 /* To do list formatting*/
     #todod-list-header{
@@ -133,41 +139,55 @@ h2{
         opacity: 0.75;
     }
     /*to do list header*/
-   #todo-list-header{
+   h3{
         font-size: 24px;
-        text-align: left;
-        margin-left: 1rem;
-    }
-    /* to do list elements*/
-    .todo-item{
-        display: flex;
-        margin: 0.5rem;
-        align-items: center;
+        text-align: center;
+
     }
 
-    /*individual todo list card*/
-    .list{
+        /*entire list of todo items*/
+        .list{
+            display: flex;
+            flex-wrap: wrap;
+            margin: 1rem 0;
+            align-items: center;
+            padding: 1rem;
+
+            border-radius: 1rem;
+            margin: 10px;
+    
+        }
+
+        
+    /*individual cards for todo list*/
+    .todo-item{
         display: flex;
-        flex-wrap: wrap;
-        margin: 1rem 0;
+        margin: 0.25rem;
         align-items: center;
-        padding: 1rem;
+        background-color: var(--todobg);
+        border-radius: 1rem;
+        margin: 10px;
+        padding: 10px;
     }
+
+
+ 
 
     input[type=checkbox]{
         justify-content: center;
-        height: 1.5rem;
-        width: 1.5rem;
+        height: 1rem;
+        width: 1rem;
         border-radius: 2px;
     }
 
     .todo-content > input{
-        height: 2rem;
+        height: 1rem;
         margin: 0.5rem;
         border-radius: 0.5rem;
-        font-size: 24px;
-        
-        padding: 0.25rem;
+        background-color: var(--todobg);
+        border-style: none;
+        font-size: 1rem;
+        padding: 0.1rem;
     }
 
     .actions{
@@ -175,7 +195,7 @@ h2{
     }
     .actions > button{
         height: auto;
-        width: 100px;
+        width: auto;
         font-size: 1rem;
         margin: 0 1rem 0 1rem;
 
@@ -183,27 +203,35 @@ h2{
 
     .edit{
         background-color: var(--primary);
+
     }
     .delete{
         background-color: var(--danger);
+
     }
 
-    
+    .notes-area{
+        margin: 1rem;
+    }
 
 
 .bottomright{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: space-around;
+    display: block;
+
     flex: 0 0 45%;
     border: 2px solid grey;
     border-radius: 1rem;
 }
 
-.embeddedvideo{
-
+#chillhop{
+    margin: 10%;
+    width: 80%;
 }
 
+.accordion{
+    width: 90% ;
+}
 
-
+.accordion-body{
+    justify-self: center;
+}
