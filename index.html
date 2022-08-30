@@ -10,31 +10,86 @@
 <body>
     <div class="topsection">
         <div class="lefttop">
-
-            <div class="timer" style="--duration: 10;--size: 200;">
-                <div class="mask"></div>
+            <h2 id="pomodorotimer">Pomodoro Timer</h2>
+            <div class="timercontainer">
+                <p class="timer" id="timer">20:00</p>
             </div>
-            <a href="https://www.youtube.com/watch?v=LAaf7-WuJJQ">link to make a timer</a>
+
             <div class="buttons">
                 <button class="start">Start</button>
                 <button class="reset">Reset</button>
             </div>
         </div>
         <div class="righttop">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/wnlcuZ0mJSU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h2 id="stretchtitle">1 Minute Stretch</h2>
+            <video width="640" height="360" id="quickstretchvideo"  controls>
+                <source src="stretch1.mp4" type="video/mp4">
+            </video>
         </div>
     </div>
     <div class="bottomsection">
         <div class="bottomleft">
-            <h2></h2>
-            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-            <label for="vehicle1"> I have a bike</label><br>
-            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-            <label for="vehicle2"> I have a car</label><br>
-            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-            <label for="vehicle3"> I have a boat</label><br>
+            <div class="greeting">
+                <h2 class="todolisttitle">To-Do List</h2>
+            </div>
+            <div class="create-todo">
+
+                <form id="new-todoform">
+                    <input 
+                        type="text"
+                        name="content"
+                        id="content"
+                        placeholder="e.g. exercise"/>
+
+                <button value="Add todo" id="submit-new-task-button" onsubmit="return false">Create New Item</button>
+                </form>
+            </div>
+
+            <div class="todo-list">
+                <h3 id="todo-list-header">To-Do List</h3>
+
+                <div class="list" id="todo-list">
+                    <div class="todo-item">
+                        <label for="">
+                            <input type="checkbox" />
+                        </label>
+
+                        <div class="todo-content">
+                            <input type="text" value="Make a video" readonly>
+                        </div> 
+
+                        <div class="actions">
+                            <button class="edit">Edit</button>
+                            <button class="delete">Delete</button>
+                        </div>
+                    </div>
+                    <div class="todo-item">
+                        <label for="">
+                            <input type="checkbox" />
+                        </label>
+
+                        <div class="todo-content">
+                            <input type="text" value="Eat Lunch" readonly>
+                        </div> 
+
+                        <div class="actions">
+                            <button class="edit">Edit</button>
+                            <button class="delete">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="notes-area">
+            <h2>Quick Notes</h2>
+            <textarea name="notes-area" id="notes-area" cols="50" rows="10"> Ipsem Lorum</textarea>
         </div>
-        <div class="bottomright"></div>
+        </div>
+        <div class="bottomright">
+            <h2>15 Minute Stretch</h2>
+            <div class="embeddedvideo">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL-G7EJFoxFceiY2Ij3oxIizEqji5mnWZ7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        
+            </div>
+        </div>
     </div>
 </body>
 <script src="index.js"></script>
